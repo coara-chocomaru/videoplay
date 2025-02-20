@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/controlsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="#80000000"
+        android:padding="8dp">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvCurrentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#FFFFFF"
+                android:padding="4dp" />
+
+            <Button
+                android:id="@+id/btnPlayPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="再生"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#FFFFFF"
+                android:padding="4dp" />
+
+            <Button
+                android:id="@+id/btnSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="動画選択"
+                android:layout_marginLeft="8dp" />
+
+            <Button
+                android:id="@+id/btnScreenLock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_screen_lock"
+                android:layout_marginLeft="8dp"
+                android:contentDescription="画面固定" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
