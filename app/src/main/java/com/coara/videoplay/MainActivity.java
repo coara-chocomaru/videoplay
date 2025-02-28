@@ -501,7 +501,6 @@ public class MainActivity extends Activity {
         scheduleHideControls();
     }
 
-    // 一定時間後に操作オーバレイを非表示にする
     private void scheduleHideControls() {
         handler.removeCallbacks(hideControlsRunnable);
         handler.postDelayed(hideControlsRunnable, CONTROLS_HIDE_DELAY);
